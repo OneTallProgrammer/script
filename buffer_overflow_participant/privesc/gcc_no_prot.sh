@@ -12,4 +12,4 @@ if [[ $ext != "c" ]]; then
 	echo "Error: Argument must be a c file"
 fi
 
-gcc -fno-stack-protector -z execstack -o $(echo $file | cut -d'.' -f1) $file
+gcc -g -fno-stack-protector -z execstack -o $(echo $file | cut -d'.' -f1) $file
